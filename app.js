@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", getWeather);
 // Change location event
 document.getElementById("w-change-btn").addEventListener("click", e => {
   const city = document.getElementById("city").value;
-  const state = document.getElementById("state").value;
+  const state = document.getElementById("country").value;
 
   weather.changeLocation(city, state);
 

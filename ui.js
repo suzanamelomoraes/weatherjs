@@ -1,6 +1,7 @@
 class UI {
   constructor() {
     this.location = document.getElementById("w-location");
+    this.country = document.getElementById("w-country");
     this.description = document.getElementById("w-description");
     this.string = document.getElementById("w-string");
     // this.icon = document.getElementById("w-icon");
@@ -13,7 +14,8 @@ class UI {
 
   display(weather) {
     this.location.textContent = weather.name;
-    this.description.textContent = weather.weather[0].description;
+    this.country.textContent = weather.sys.country;
+    this.description.textContent = `Description: ${weather.weather[0].description}`;
     this.string.textContent = weather.weather[0].main;
     // this.icon.setAttribute("src", weather.weather[0].icon);
     this.temp.textContent = `Temperature ${weather.main.temp}`;

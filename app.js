@@ -20,6 +20,10 @@ document.getElementById("w-change-btn").addEventListener("click", e => {
   //Get and display weather
   getWeather();
 
+  this.city.value = "";
+  this.country.value = "";
+
+
   //Close modal
   $("#locModal").modal("hide");
 });
